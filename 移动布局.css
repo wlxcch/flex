@@ -1,0 +1,125 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+  .parent{
+    margin-bottom:auto;
+    margin-bottom:auto;
+    background:#ddd;
+  }
+  .clearfix::after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .logo{
+    width:13.33%;
+    background:#ddd;
+    height:36px;
+    line-height:36px;
+    float:left;
+  }
+  .daohang{
+    width:86.66%;
+    background:green;
+    float:right;
+  }
+  .nav >.navItem{
+    float:right;
+    margin-left:5px;
+    background:yellow;
+    margin-top:7px;
+    margin-bottom:7px;
+    width:60px;
+  }
+  .nav2{
+    display:none;
+    float:right;
+  }
+  @media(max-width:420px){
+    .nav2{
+      display:block;
+    }
+    .nav{
+      display:none;
+    }
+  }
+  .banner{
+    width:800px;
+    height:300px;
+    background:#888;
+    margin:0 auto;
+  }
+  @media(max-width:420px){
+    .banner{
+      width:auto;
+    } 
+  }
+  .pictures {
+     width:800px;
+     margin:0 auto;
+     overflow: hidden;
+  }
+  .xxx{
+     display:flex;
+     flex-wrap:wrap;
+     margin:0 -4px;  
+  }
+  .picture{
+    background:#ddd;
+    height:194px;
+    width:calc(25% - 8px);
+    margin:4px;
+  }
+  @media(max-width:420px){
+    .pictures{
+      width:auto;
+    }
+    .picture{
+      width:calc(50% - 8px);
+    }
+  }
+ /* .picture:nth-child(4n+1){
+    margin-left:0;
+  }
+  .picture:nth-child(4n){
+    margin-right:0;
+  }
+  IE不支持，然后再pictures里再加一个div，再给这个div加负margin ,
+  使得这个div大于父元素，向外延伸,不看边框，使得内部元素和上面的banner对齐，
+  实现使得宽度可以容纳浮动的4个div*/
+  .art{
+    width:800px;
+    background:red;
+    margin:0 auto;
+    display: flex;
+  }
+  @media(max-width:420px){
+    .art{
+      width:auto;
+      flex-direction: column;
+    }
+  }
+  .sider{
+    border:1px solid black;
+    width:calc(33.3333% - 20px);
+    margin-right:20px;
+    height:300px;
+  }
+  .main{
+    border:1px solid black;
+    width:66.6666%;
+    height:300px;
+  }
+  @media(max-width:420px){
+    .sider{
+      width:auto;
+      height:auto;
+    }
+    .main{
+      width:auto;
+      height:auto;
+    }
+  }
+  
